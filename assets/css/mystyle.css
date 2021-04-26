@@ -1,0 +1,909 @@
+/* Box sizing rules */
+/* https://piccalil.li/tutorial/how-css-box-sizing-works */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+.list__nostyle{
+    list-style-type: none;
+}
+
+ul{
+  padding-left:0px;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+
+.card{
+  border-style: none;
+}
+
+.container-fluid{
+  padding:0px!important;
+}
+/* Home heading style */
+
+/* .home__heading{ */
+  /* margin-top: 19.45vw; */
+  /* width: 50%;
+} */
+@media screen and (min-width: 701px) {
+  div.home__logo{
+    margin-top: 0vw;
+        /* width: 50%; */
+    display: none;
+  }
+  h1.home__heading-style{
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 14.18vw;
+    text-transform: uppercase; 
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  div.home__logo{
+    margin-top: 19.45vw;
+    width: 50%;
+  }
+
+  h1.home__heading-style{
+    display:none;
+  }
+
+  div.home__heading{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+
+@media screen and (min-width: 601px) {
+    a.home__link-style {
+        font-family: 'Playfair Display', serif;
+        font-weight: 500;
+        color: white;
+        text-decoration: none;
+        text-transform: none;
+        font-size: 2rem;
+        padding-right:160px;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    a.home__link-style {
+        font-family: 'Playfair Display', serif;
+        font-weight: 500;
+        color: white;
+        text-decoration: none;
+        text-transform: none;
+        font-size: 1.3rem; 
+    }
+  }
+
+
+  /* change link display  */
+  @media screen and (min-width: 900px) {
+    li.list__inline {
+        display: inline;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    li.list__inline {
+        display: block;
+        padding-bottom: 1.87rem;
+    }
+  }
+
+  /* .card__link-list{
+      margin-top: 100px;
+      text-align: center;
+  } */
+
+  @media screen and (min-width: 601px) {
+    div.card__link-list{
+        margin-top: 3.125rem;
+        text-align: left;
+    }
+
+    section.home__card{
+      padding: 2.37vw!important;
+      margin-bottom: 0px!important;
+      margin-top: 20px!important;
+    }
+  
+  }
+
+  @media screen and (max-width: 600px) {
+    div.card__link-list{
+        margin-top: 6.25rem;
+        text-align: center;
+        padding-bottom: 10.77vw;
+    }
+
+    section.home__card{
+      padding: 2.37vw!important;
+      margin-bottom: 0px!important;
+      margin-top: 10px!important;
+    }
+  }
+
+  .mb-2{
+    margin-bottom: 0px!important;
+  }
+
+  .home__discover-btn{
+    /* border-style: solid; */
+    background-color: #F19B1F;
+    padding-right:3.2rem!important;
+    padding-left:3.2rem!important ;
+    padding-top:0.2rem;
+    padding-bottom:0.2rem;
+    border-radius: 3.125rem;
+  }
+
+  /* ***********Prints Page********** */
+.nav{
+  background-color: #F0C735;
+  /* height: 6.25rem; */
+  /* display:flex ;
+  justify-content: space-around; */
+  padding-left:1.6rem;
+}
+
+.nav__link{
+  color:white!important;
+  text-decoration: none;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.25rem;
+  /* padding-right: 6rem; */
+}
+
+.nav-link{
+  padding-right: 6rem!important;
+}
+
+@media screen and (min-width:1000px) {
+  a.nav__logo{
+    width: 60px;
+  }
+  .nav__link-list{
+    margin-top: 3.125rem;
+    display: flex;
+    justify-content:flex-end;
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+  a.nav__logo{
+    width: 30px;
+  }
+
+  .nav__link-list{
+    margin-top: 3.125rem;
+    display: flex;
+    justify-content: start;
+  }
+}
+
+.button, .navbar-toggler{
+  border-style: none!important;
+  border-color:unset!important;
+}
+
+.nav__links-padding{
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width: 701px) {
+
+  h2.link__acc_cart{
+    display: none;
+  }
+  
+  .header__img-scale{
+    /* width: 20%; */
+    width: 400px;
+    /* width: 20vh; */
+  }
+
+  .print__header-style{
+    font-family: 'Playfair Display',serif;
+    font-size: 8vh;
+    /* font-size:100px; */
+    font-weight: 700;
+    margin-left:1.25vh;
+  }
+
+  .header__prints-text{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.125rem;
+    margin-left:1.25vh;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  div.logo__acc_cart{
+    display: none;
+  }
+
+  h2.link__acc_cart{
+    color:white!important;
+    text-decoration: none;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.25rem;
+  }
+
+  .print__header-style{
+    font-family: 'Playfair Display',serif;
+    font-size: 6vh;
+    /* font-size:100px; */
+    font-weight: 700;
+    margin-left:1.25vh;
+  }
+
+  .header__img-scale{
+    /* width: 20%; */
+    /* width: 400px; */
+    width: 20vh;
+  }
+
+  .header__prints-text{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    margin-left:1.25vh;
+  }
+
+  /* div.card{
+    width:20rem;
+    padding-right: 0px;
+  } */
+
+}
+
+.row__header{
+  background-color: #F0C735;
+  border-style: none;
+}
+
+.header__prints{
+  display: flex;
+  justify-content: center;  
+
+}
+
+.header__texts{
+  margin-bottom: 1.25vh;
+}
+
+.filter__search{
+  padding:3.65vw;
+}
+
+.filter__width{
+ /* padding-left:0.52vw;
+ padding-right:40px;
+ margin-top: 1.56vw; */
+ width:140px
+}
+
+.filter{
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.25rem;
+}
+
+/* select:focus {
+  box-shadow: none;
+} */
+
+/* prints card */
+.card-title{
+  font-family: 'Work Sans',sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.313rem;
+  /* width:60%; */
+}
+
+.card__artist-name{
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.card__price{
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 21px;
+}
+
+.all__prints{
+  /* padding-left:5%;
+  padding-right:5%; */
+  padding:auto;
+  /* margin-top:20px; */
+}
+
+.prints__card{
+  width:20rem;
+  margin: auto;
+  margin-bottom:80px;
+  border-style: none;
+}
+
+.card-body{
+  padding-left:0px!important;
+  padding-right:0px!important;
+  /* padding-top:10px; */
+}
+
+.item__detail{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.input__qty{
+  width:3.125rem;
+}
+
+.add_btn{
+  width: 16rem;
+  margin-left: 11.08vh;
+  height: 40px;
+  border-style: none;
+  background-color: #F19B1F;
+  padding-right:3.2rem!important;
+  padding-left:3.2rem!important ;
+  padding-top:0.2rem;
+  padding-bottom:0.2rem;
+  border-radius: 3.125rem;
+  color:white;
+}
+
+.add_btn-cart{
+  width: 16rem;
+  height: 40px;
+  border-style: none;
+  background-color: #F19B1F;
+  padding-right:3.2rem!important;
+  padding-left:3.2rem!important ;
+  padding-top:0.2rem;
+  padding-bottom:0.2rem;
+  border-radius: 3.125rem;
+  color:white;
+}
+
+.desc__head{
+  border-top: solid;
+  border-width: 0.8px;
+  padding-top:20px;
+  /* width: 500px; */
+
+  font-family: 'Work Sans',sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+
+@media screen and (min-width: 701px) {
+
+  .item__title{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2.0rem;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    line-height: 1.4;
+
+    }
+  .item__artist{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.2;
+    letter-spacing: 2px;
+  }
+
+  .item__price{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.06rem;
+    line-height: 1.2;
+    letter-spacing: 2px;
+  }
+
+  .desc__head{
+    width: 500px;
+  }
+  .item__details{
+    margin-top: 1rem;
+    /* border-style: solid; */
+    margin:0px;
+    width:50rem;
+  }
+
+  .all__prints {
+    /* padding: auto; */
+    margin-top: 6rem;
+  }
+
+  .cart__item-img{
+    width:90%;
+  }
+
+  .cart_body-heading{
+    font-family: 'Work Sans',sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .cart__summary{
+    margin-top: 40px;
+    padding-left: 30px;
+    /* background: rgba(196, 196, 196, 0.1); */
+  }
+  
+  .cart__summary__heading{
+    font-family: 'Work Sans',sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+
+  .user_card{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .user__card-img{
+    width:10%;
+  }
+
+  .sing__card{
+    padding:40px;
+  }
+
+  
+}
+
+@media screen and (max-width: 700px) {
+
+  .item__title{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.6;
+    letter-spacing: 2px;
+
+    }
+  .item__artist{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.96rem;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+  }
+
+  .item__price{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  .add_btn{
+    width: 200px;
+    margin-left: 3.125rem;
+  }
+
+  .desc__head{
+    width: 40vh;
+  }
+
+  .more__tag{
+    display: flex;
+    justify-content: center;
+  }
+
+  .all__prints {
+    /* padding: auto; */
+    margin-top: 3.125rem;
+  }
+
+  .item__detail{
+    margin-top: 2.5rem;
+    margin-bottom: 0rem;
+  }
+  
+  /* .cart__item-img{
+    width:50%;
+  } */
+
+  .cart_body-heading{
+    font-family: 'Work Sans',sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    width:80px;
+  }
+
+  .cart__heading-hidden{
+    display: none;
+  }
+
+  .cart__total{
+    font-size: 0.6rem;
+  }
+
+  .cart__summary__heading{
+    font-family: 'Work Sans',sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+
+  .user_card{
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.98rem;
+  }
+
+  .user__card-img{
+    width:15%;
+  }
+
+  .sing__card{
+    margin-top:60px;
+    padding:10px;
+  }
+
+}
+
+.desc__body{
+  width: 155px;
+}
+
+.desc__body-heading{
+  font-family: 'Work Sans',sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 21px;
+
+}
+
+.desc__body-text{
+  font-family: 'Work Sans',sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 21px;
+
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.out-of-stock{
+  font-family: 'Work Sans',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 21px;
+
+  color: #BA6633;
+}
+
+.in-stock{
+  font-family: 'Work Sans',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 21px;
+
+  color: #329727;
+}
+
+.stock__padding{
+  padding-top:20px;
+}
+
+.more__tag{
+  font-family: 'Work Sans',sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin:auto;
+}
+
+button{
+  border-style: unset;
+  background: rgba(196, 196, 196, 0.19)!important;
+}
+
+.qty__update-btn{
+  margin-right:0px!important;
+}
+
+.cart__qty{
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.cart__items{
+  /* border-style:solid; */
+  background: rgba(91, 129, 87, 0.15);
+  margin-top: 50px;
+}
+
+.cart_body-text{
+  font-family: 'Work Sans',sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 21px;
+
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.out-of-stock__cart{
+  font-family: 'Work Sans',sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.6rem;
+  line-height: 21px;
+
+  color: #BA6633;
+}
+
+.in-stock__cart{
+  font-family: 'Work Sans',sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.6rem;
+  line-height: 21px;
+
+  color: #329727;
+}
+
+.cart__price, .cart__total{
+  font-family: 'Work Sans', sans-serif ;
+  font-style: normal;
+  /* font-weight: normal; */
+  font-size: 1rem;
+  line-height: 21px;
+}
+
+.cart__head{
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.main__cart{
+  background: rgba(196, 196, 196, 0.1);
+  padding:0px!important;
+  height:auto;
+}
+
+.borderless td, .borderless th {
+  border: none;
+}
+
+.cart_sub{
+  font-family: 'Work Sans', sans-serif ;
+  /* font-style: normal; */
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 21px;
+}
+
+.select__delivery{
+  width:auto;
+  height:40px;
+  margin-top: 20px;
+}
+
+.delivery_info{
+  font-family: 'Work Sans',sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.8rem;
+  line-height: 19px;
+  color:#F19B1F;
+}
+
+.deliver__add-head{
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.deliverAdd{
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+button {
+  /* border-style: unset; */
+  background:transparent!important;
+}
+
+.cancel__btn{
+  border-style: none;
+  background: none;
+  padding-top:10px;
+}
+
+.cancel_btn:hover{
+  text-decoration: underline;
+}
+
+.address_input{
+  width:360px;
+  padding:6px;
+}
+
+input[type=radio]{
+  transform:scale(0.8);
+  padding-top:10px;
+}
+
+.cart__empty{
+  background:rgba(91, 129, 87, 0.15); ;
+}
+
+.empty__cart{
+  font-family:'Work Sans',sans-serif;
+  /* font-style: normal; */
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.continue__shopping{
+  font-family:'Work Sans',sans-serif;
+  /* font-style: normal; */
+  font-weight: 400;
+  font-size: 15px;
+
+  text-decoration: underline;
+  padding-bottom: 5px;
+  color:tomato;
+}
+
+.login__body{
+  background: rgba(91, 129, 87, 0.15);
+}
+
+.login__heading{
+  font-family:'Work Sans',sans-serif;
+  /* font-style: normal; */
+  font-weight: 400;
+  font-size: 30px;
+
+  padding-left:18px;
+}
+
+.error{
+  font-family: 'Work Sans',sans-serif;
+  font-size: 0.9rem;
+  color: #E86A43;
+}
+
+.sign__in{
+  width: 10rem;
+  height: 40px;
+  border-style: none;
+  background-color: #F19B1F;
+  padding-right:3.2rem!important;
+  padding-left:3.2rem!important ;
+  padding-top:0.2rem;
+  padding-bottom:0.2rem;
+  border-radius: 3.125rem;
+  color:white;
+}
